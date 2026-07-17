@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-8;
+  }
+
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.2em] text-sable;
+  }
+
+  .hairline {
+    @apply h-px w-full bg-ink/10;
+  }
+
+  .dot {
+    @apply inline-block h-2 w-2 rounded-full;
+  }
+
+  .glass {
+    @apply rounded-2xl border border-white/40 bg-white/55 shadow-[0_8px_40px_rgba(22,20,15,0.12)] backdrop-blur-md;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition-colors disabled:cursor-not-allowed disabled:opacity-50;
+  }
+}
+
+@layer utilities {
+  .animate-rise {
+    @apply animate-rise;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
